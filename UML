@@ -1,0 +1,64 @@
+ _______________________________________________
+|                  JDBCAdvancedFeatures         |
+|_______________________________________________|
+| -main(args: String[]): void                   |
+|_______________________________________________|
+
+           ____________________________________
+          |                Connection          |
+          |____________________________________|
+          | +createStatement(): Statement      |
+          | +createStatement(int, int): Statement|
+          | +prepareStatement(String): PreparedStatement|
+          | +prepareStatement(String, int): PreparedStatement|
+          |____________________________________|
+
+      _____________________|_______________________
+     |                  Statement                 |
+     |_____________________________________________|
+     | +executeBatch(): int[]                     |
+     | +executeQuery(String): ResultSet           |
+     | +addBatch(String): void                    |
+     | +executeUpdate(String): int                |
+     | +close(): void                             |
+     |_____________________________________________|
+
+      _____________________|_______________________
+     |           PreparedStatement               |
+     |_____________________________________________|
+     | +setInt(int, int): void                    |
+     | +setString(int, String): void             |
+     | +setBytes(int, byte[]): void              |
+     | +executeUpdate(): int                      |
+     | +executeQuery(): ResultSet                 |
+     | +close(): void                             |
+     |_____________________________________________|
+
+      _____________________|_______________________
+     |              ResultSet                     |
+     |_____________________________________________|
+     | +next(): boolean                           |
+     | +getInt(int): int                         |
+     | +getString(int): String                   |
+     | +getBytes(int): byte[]                   |
+     | +updateString(int, String): void           |
+     | +updateRow(): void                         |
+     | +beforeFirst(): void                       |
+     | +last(): boolean                           |
+     | +close(): void                             |
+     |_____________________________________________|
+
+      _____________________|_______________________
+     |              RowSet                        |
+     |_____________________________________________|
+     | +setUrl(String): void                      |
+     | +setUsername(String): void                 |
+     | +setPassword(String): void                 |
+     | +setCommand(String): void                  |
+     | +execute(): void                           |
+     | +next(): boolean                           |
+     | +getInt(int): int                         |
+     | +getString(int): String                   |
+     | +close(): void                             |
+     |_____________________________________________|
+
